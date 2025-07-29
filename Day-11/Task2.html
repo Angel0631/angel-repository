@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #out{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            gap: 5px;
+
+            grid-template-areas:
+                "in1 in1 in2"
+                "in3 in4 in5"
+                "in3 in7 in5"
+                "in6 in8 in9"
+        }
+        #out>div{
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-size: 24px;
+        }
+
+        #in1{
+            grid-area: in1;
+        }
+
+        #in2{
+            grid-area: in2;
+        }
+        
+        #in3{
+            grid-area: in3;
+        }
+
+        #in4{
+            grid-area: in4;
+        }
+        
+        #in5{
+            grid-area: in5;
+        }
+        
+        #in6{
+            grid-area: in6;
+        }
+        
+        #in7{
+            grid-area: in7;
+        }
+        
+        #in8{
+            grid-area: in8;
+        }
+
+        #in9{
+            grid-area: in9;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="out">
+        <div id="in1">1</div>
+        <div id="in2">2</div>
+        <div id="in3">3</div>
+        <div id="in4">4</div>
+        <div id="in5">5</div>
+        <div id="in6">6</div>
+        <div id="in7">7</div>
+        <div id="in8">8</div>
+        <div id="in9">9</div>
+    </div>
+</body>
+</html>

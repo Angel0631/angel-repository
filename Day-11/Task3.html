@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Blog</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "main aside"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        header {
+            grid-area: header;
+            background-color:rgb(119, 233, 132)
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color:slateblue;
+            margin-right: 10px;
+        }
+
+        main {
+            grid-area: main;
+            background-color: #5755e6;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: #64dfe4;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+            background-color:#dd9de3;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Travel Blog</h1>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Destinations</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <article>
+                    <h2>Trip to Japan</h2>
+                    <p>I had an amazing trip to Japanlast summmer</p>
+                </article>
+                <article>
+                    <h2>Exploring Italy</h2>
+                    <p>Rome and Venice were unforgettable!</p>
+                </article>
+            </section>
+        </main>
+
+        <aside>
+            <h3>Travel Tips</h3>
+            <ul>
+                <li>Pack light</li>
+                <li>Learn basic local phrases</li>
+            </ul>
+        </aside>
+
+        <footer>
+            <p>&copy; 2025 My Travel Blog</p>
+        </footer>
+    </div>
+</body>
+</html>
