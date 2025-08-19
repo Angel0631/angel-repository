@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple App</title>
+</head>
+<body>
+    <h2>Type something</h2>
+    <textarea id="textBox" rows="8" cols="60">this is an simple app</textarea>
+    <script>
+        const textBox = document.getElementById("textBox");
+        textBox.addEventListener("input", () => {
+            console.log("User typed:", textBox.value);
+        });
+    </script>
+</body>
+</html>

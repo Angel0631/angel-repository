@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple App</title>
+</head>
+<body>
+  <h2>Type something</h2>
+  <div id="editor" 
+       style="width:500px; height:150px; border:1px solid black; padding:10px;">
+  </div>
+
+  <script>
+    const editor = document.getElementById('editor');
+    let textContent = editor.textContent;
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Backspace') {
+        event.preventDefault(); 
+        textContent = textContent.slice(0, -1);
+      } 
+      else if (event.key.length === 1) {
+        textContent += event.key;
+      }
+
+      editor.textContent = textContent;
+    });
+  </script>
+</body>
+</html>

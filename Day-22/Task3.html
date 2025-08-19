@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Simple Drag and Drop</title>
+    <style>
+        #drag-item {
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+            border: 1px solid rgb(239, 26, 26);
+        }
+        
+        #drop-area {
+            width: 200px;
+            height: 200px;
+            background: rgb(14, 25, 216);
+            border: 2px dashed black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="drag-item" draggable="true">Drag me</div>
+    <div id="drop-area">Drop here</div>
+
+    <script>
+        const dragItem = document.getElementById('drag-item');
+        const dropArea = document.getElementById('drop-area');
+
+        dragItem.addEventListener('dragstart', function(e) {
+            console.log('dragstart - dragging started');
+        });
+
+        dragItem.addEventListener('dragend', function(e) {
+            console.log('dragend - dragging ended');
+        });
+
+        dropArea.addEventListener('dragenter', function(e) {
+            console.log('dragenter - entered drop area');
+            e.preventDefault();
+        });
+
+        dropArea.addEventListener('dragover', function(e) {
+            e.preventDefault(); 
+        });
+
+        dropArea.addEventListener('drop', function(e) {
+            console.log('drop - item was dropped');
+            e.preventDefault();
+            dropArea.textContent = 'Dropped!';
+            dropArea.appendChild(dragItem);
+        });
+    </script>
+</body>
+</html>
